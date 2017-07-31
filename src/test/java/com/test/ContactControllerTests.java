@@ -4,6 +4,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,7 @@ public class ContactControllerTests {
 	@Autowired
 	private MockMvc mockMvc;
 
+	@Ignore
 	@Test
 	public void noParamShouldReturnNoContent() throws Exception {
 		this.mockMvc.perform(get("/hello/contacts").param("nameFilter", "")).andDo(print())

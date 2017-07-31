@@ -18,4 +18,9 @@ public class ContactServiceImpl implements ContactService {
 		return contactRepository.findByNameNotLike(name);
 	}
 
+	@Override
+	public List<Contact> findAll() {
+		return contactRepository.findAll();
+	}
+
 }

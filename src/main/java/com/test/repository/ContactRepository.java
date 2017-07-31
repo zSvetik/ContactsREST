@@ -10,4 +10,6 @@ public interface ContactRepository extends JpaRepository<Contact, Integer> {
 
 	List<Contact> findByNameNotLike(String name);
 
+	List<Contact> findAll();
+
 }
